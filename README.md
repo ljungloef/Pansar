@@ -35,7 +35,7 @@ let result =
   // 1. Select what should be parsed
   From.string "#ff6600"
 
-  // 2. Run the parser on the source using one of the available execution strategies
+  // 2. Run the parser on the source using one of the available strategies
   |> Parse.withException (parser ())
 
 printf $"R=%i{result.Red} G=%i{result.Green} B=%i{result.Blue}"
