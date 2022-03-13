@@ -34,7 +34,7 @@ module ParseResults =
     | Consume of Consume: struct (IMaterializerFunc<'T> * SequencePosition)
 
     /// `Failure` occurs when a parser is not able to consume the expected items.
-    /// The reason to the failure is given in the `ParseFailureCode' of the case. The attached tag tells which parser that reported the failure
+    /// The reason to the failure is given in the `ParseFailureCode` of the case. The attached tag tells which parser that reported the failure
     | Failure of Failure: struct (ParserTag * ParseFailureCode)
 
   /// The available failure codes

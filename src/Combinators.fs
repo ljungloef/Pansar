@@ -167,7 +167,7 @@ module Primitives =
   /// `Parsers.retag` in reverse parameter order
   let (<?>) p t = retag t p
 
-  /// `Parsers.bind in reverse parameter order
+  /// `Parsers.bind` in reverse parameter order
   let inline (>>=) parser f = bind f parser
 
   /// `Parsers.assign` in reverse parameter order

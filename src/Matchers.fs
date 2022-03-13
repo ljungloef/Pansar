@@ -30,13 +30,13 @@ type IMatcher =
   /// Tries to match once at the current position in the provided `System.Buffers.SequenceReader{byte}`.
   /// The consumer registers the match in the `MatchTracker`.
   ///
-  /// Returns 'true` if the sequence contained enough items to do the search; otherwise `false`.
+  /// Returns `true` if the sequence contained enough items to do the search; otherwise `false`.
   abstract member Match: byref<SequenceReader<byte>> * byref<MatchTracker> -> bool
 
   /// Tries to match multiple times, starting at the current position in the provided `System.Buffers.SequenceReader{byte}`.
   /// The consumer registers all matches in the `MatchTracker`.
   ///
-  /// Returns 'true` if the sequence contained enough items to do the search; otherwise `false`. The consumer will only return `false` if the first match
+  /// Returns `true` if the sequence contained enough items to do the search; otherwise `false`. The consumer will only return `false` if the first match
   /// fails because of insufficient amount of items.
   abstract member MatchMany: byref<SequenceReader<byte>> * byref<MatchTracker> -> bool
 
@@ -46,7 +46,7 @@ and IDelimiterSearcher =
   /// The search starts from the reader's current position.
   ///
   /// Returns `FindResult.Found` and sets the `length` parameter to the delimiter's length if the delimiter was found. The reader will be positioned at the start of the delimiter.
-  /// If the delimiter was not found, the searcher returns 'FindResult.NotFound` if the sequence contained enough items to do the search; otherwise `FindResult.NotEnoughData`.
+  /// If the delimiter was not found, the searcher returns `FindResult.NotFound` if the sequence contained enough items to do the search; otherwise `FindResult.NotEnoughData`.
   abstract member FindNext: byref<SequenceReader<byte>> * outref<int64> -> FindResult
 
 /// Used by a matcher to report the result when searching through a sequence of items.

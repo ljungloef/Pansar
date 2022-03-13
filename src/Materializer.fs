@@ -191,7 +191,7 @@ module MaterializerFactoryTypes =
     override __.Many(tracker: inref<MatchTracker>) =
       MaterializerFunc.scoped converter tracker.StartPos tracker.Length
 
-  /// `StepMaterializer{} will track all matches from a consumer, and run the materalizer on all matches. The result from the materialization is an array of `{T}`
+  /// `StepMaterializer{}` will track all matches from a consumer, and run the materalizer on all matches. The result from the materialization is an array of `{T}`
   type StepMaterializer<'T>(converter: IMaterializerConverter<'T>) =
     inherit MaterializerFactory<'T, 'T array>(true)
 

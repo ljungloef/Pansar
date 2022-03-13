@@ -2,7 +2,7 @@
 
 **Pansar** aims to be a high performance, low memory allocation F# parser combinator library. The library is built upon the existing robust, high-speed components of .NET, such as `Span<>`, `ReadOnlySequence<>` and `SequenceReader<>`. Most of these high-speed components resides on the stack and guides one to a more imperative programming style. Pansar tries to encapsulate all imperative parts and instead package it in a more functional style API, without compromising (too much) speed.
 
-NOTE: The library is in an early development phase and not production ready. 
+NOTE: The library is in an early development phase and not production ready.
 
 ## Example
 
@@ -17,11 +17,14 @@ type Color = { Red: byte; Green: byte; Blue: byte }
 let parser () =
 
   let numberSign = Match.char '#' /> Materialize.ignore
-
   let channel = leftSlice 2 (utf8Bytef NumberFormat.Hexadecimal)
 
+  // Match on '#' but discard the char from the result, and then match three channels and keep their results.
   numberSign .> consume3 channel
-  |>> (fun ((r, g), b) -> { Red = r; Green = g; Blue = b })
+  |>> (fun ((r, g), b) -> {
+    Red = r;
+    Green = g;
+    Blue = b })
 ```
 
 ### Run parser
