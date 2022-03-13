@@ -1,0 +1,15 @@
+This is just a random text that can be used to benchmark a parser. Short sentences are good. Because they result in many dots. We can match on dots.
+
+But it would be good to also have some more paragraphs. This is just a random text that can be used to benchmark a parser. Short sentences are good. Because they result in many dots. We can match on dots.
+
+And another. This is just a random text that can be used to benchmark a parser. Short sentences are good. Because they result in many dots. We can match on dots.
+
+This is just a random text that can be used to benchmark a parser. Short sentences are good. Because they result in many dots. We can match on dots.
+
+This is just a random text that can be used to benchmark a parser. Short sentences are good. Because they result in many dots. We can match on dots.
+
+This is just a random text that can be used to benchmark a parser. Short sentences are good. Because they result in many dots. We can match on dots.
+
+This is just a random text that can be used to benchmark a parser. Short sentences are good. Because they result in many dots. We can match on dots.
+
+This is just a random text that can be used to benchmark a parser. Short sentences are good. Because they result in many dots. We can match on dots.
