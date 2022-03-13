@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Pansar.Benchmarks</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="HttpHeaderBenchmark.fs" />
+    <Compile Include="SliceByBenchmark.fs" />
+    <Compile Include="LeftSliceTillBenchmark.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fixtures\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\Pansar.fsproj" />
+    <ProjectReference Include="..\samples\Samples.fsproj" />
+  </ItemGroup>
+</Project>

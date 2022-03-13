@@ -1,0 +1,56 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": ".NET Core Test with debugger",
+      "type": "process",
+      "isBackground": true,
+      "command": "dotnet",
+      "args": [
+        "test",
+        "${workspaceFolder}/test/Tests.fsproj"
+      ],
+      "options": {
+        "env": {
+          "VSTEST_HOST_DEBUG": "1"
+        },
+      },
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build solution",
+      "type": "process",
+      "isBackground": true,
+      "command": "dotnet",
+      "args": [
+        "build",
+        "${workspaceFolder}/Pansar.sln"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Format solution",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "fantomas",
+        "./**/*.fs"
+      ],
+      "group": "none"
+    }
+  ]
+}

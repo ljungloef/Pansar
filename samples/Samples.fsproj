@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>6.0</LangVersion>
+    <RootNamespace>Pansar.Samples</RootNamespace>
+    <AssemblyName>Pansar.Samples</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="HexColorParser.fs" />
+    <Compile Include="HttpHeadersParser.fs" />
+    <Compile Include="UnicodeDataParser.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\Pansar.fsproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>6.0</LangVersion>
+    <RootNamespace>Pansar</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Buffers.fs" />
+    <Compile Include="Debug.fs" />
+    <Compile Include="Materializer.fs" />
+    <Compile Include="Matchers.fs" />
+    <Compile Include="Parser.fs" />
+    <Compile Include="Consumers.fs" />
+    <Compile Include="Combinators.fs" />
+    <Compile Include="Control.fs" />
+    <Compile Include="Slicing.fs" />
+    <Compile Include="Parse.fs" />
+    <Compile Include="Text.fs" />
+    <Compile Include="Binary.fs" />
+  </ItemGroup>
+</Project>
