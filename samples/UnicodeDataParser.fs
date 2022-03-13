@@ -57,16 +57,3 @@ module UnicodeDataParser =
         GeneralCategory = category })
 
   let parser = sliceBy crlf row
-
-  let get () =
-    task {
-      use client = new HttpClient()
-
-      let! content = client.GetByteArrayAsync("https://www.unicode.org/Public/14.0.0/ucd/UnicodeData.txt")
-
-      let result =
-        From.byteArray content
-        |> Parse.withException parser
-
-      return result
-    }
