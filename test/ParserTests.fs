@@ -30,9 +30,7 @@ module bind =
     let parser = Match.char 'a' /> Materialize.toString
     let combined = parser >>= fun _ -> Parsers.utf8Rune ()
 
-    let result =
-      From.string "abc"
-      |> Parse.withException combined
+    let result = From.string "abc" |> Parse.withException combined
 
     result.ToString() |> should equal "b"
 

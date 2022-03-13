@@ -27,13 +27,13 @@ open Pansar.Text
 [<SimpleJob; MemoryDiagnoser>]
 type LeftSliceTillBenchmark() =
 
-  let delimiter = Match.char '.' /> Materialize.toString
+  let delimiter = Match.char '.'
   let content = Parsers.utf8String ()
 
   let mutable data: ReadOnlySequence<byte> = ReadOnlySequence.Empty
   let mutable counter = 0
 
-  [<Params("lorum-ipsum-1-p.txt")>]
+  [<Params("random-text-1-p.txt")>]
   member val public file = "" with get, set
 
   [<GlobalSetup>]

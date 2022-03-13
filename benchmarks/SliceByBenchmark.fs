@@ -28,13 +28,13 @@ open Pansar.Text.Predicates.Ascii
 [<SimpleJob; MemoryDiagnoser>]
 type SliceByBenchmark() =
 
-  let delimiter = Match.if' isWhitespace /> Materialize.toString
+  let delimiter = Match.if' isWhitespace
   let parser = Parsers.utf8String ()
 
   let mutable data: ReadOnlySequence<byte> = ReadOnlySequence.Empty
   let mutable counter = 0
 
-  [<Params("lorum-ipsum-1-p.txt")>]
+  [<Params("random-text-1-p.txt")>]
   member val public file = "" with get, set
 
   [<GlobalSetup>]
